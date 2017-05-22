@@ -244,13 +244,18 @@ header > h2 {
   align-content: space-between;
 }
 .people-list > * {
-  flex: 1 1 15%;
+  flex: 1 1 20%;
   padding: 1rem;
   color: black;
   text-decoration: none;
 }
 .people-list img {
   border-radius: 50%;
+  max-width: 100%;
+}
+.people-list img:hover {
+  box-shadow: 0.2rem 0.2rem rgba(0,0,0,0.5);
+  opacity: 0.8;
 }
 .become-member {
   background-color: #f26522;
