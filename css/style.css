@@ -1,0 +1,328 @@
+html, body {
+  font-family:Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background: url('https://metalab.at/wiki/images/b/b1/Maker_Faire_Dome.jpg') no-repeat center center fixed;
+  position: sticky;
+  top: 0px;
+  min-width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: flex-start;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.main > * {
+  margin: 1rem;
+  max-width: 500px;
+}
+
+#events {
+  background-color: #003054;
+  color: white;
+  box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
+}
+#events h2 {
+  margin: 0;
+  padding: 0.5rem;
+}
+#events > a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.8rem;
+  padding: 0.25rem;
+}
+#events > a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.eventlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.event {
+  padding: 0.5rem;
+  display: block;
+}
+.event > a {
+  color: white;
+  text-decoration: none;
+}
+.event > a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+.event:nth-child(2n+1) {
+  background-color: rgba(255,255,255,0.5);
+}
+.event:nth-child(2n) {
+  background-color: rgba(255,255,255,0.2);
+}
+.event > a > * {
+  margin: 0;
+}
+.event > a > p {
+  display: inline;
+}
+.event-room::before {
+  content: "@ ";
+}
+
+header {
+  flex: 0 1 auto;
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
+}
+header > * {
+  padding: 0.5rem;
+}
+header > p {
+  margin: 0;
+}
+header > h2 {
+  background-color: #003054;
+  color: white;
+  margin: 0;
+}
+.main-buttons {
+  padding-bottom: 1rem;
+}
+.main-buttons > a:first-of-type {
+  background-color: #f26522;
+  color: white;
+  padding: 0.5rem;
+}
+.main-buttons > a {
+  color: #999;
+  padding: 0.5rem;
+}
+.main-buttons > a:hover {
+  opacity: 0.8;
+}
+
+.titlebar-bg {
+  background: transparent;
+  z-index: 10;
+  position: sticky;
+  top: -1px;
+  margin-top: -15vh;
+}
+.titlebar {
+  margin-top: 3rem;
+  background-color: #f26522;
+  color: white;
+  transform: skewY(-3deg);
+}
+.titlebar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.nav {
+  padding: 0;
+  list-style: none;
+}
+.nav li {
+  display: inline-block;
+  background-color: #003054;
+  font-size: 1.25rem;
+}
+.nav a {
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+.nav a:hover {
+  text-decoration: underline;
+  color: white;
+  opacity: 0.8;
+}
+.title {
+  text-transform: uppercase;
+  text-align: right;
+  align-self: center;
+  padding: 1rem;
+  margin: 0;
+  font-size: 2rem;
+}
+.title > a {
+  color: white;
+  text-decoration: none;
+}
+
+#projects {
+  z-index: 2;
+  background-color: #003054;
+  transform: skewY(-3deg);
+  color: white;
+  margin: 0;
+  padding: 10rem 1rem;
+  text-align: right;
+}
+.projects-inner {
+  margin: 0 auto;
+  max-width: 960px;
+  transform: skewY(3deg);
+}
+.project-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.project-list > a {
+  flex: 1 1 15%;
+  background-color: rgba(255,255,255,0.2);
+  margin: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+.project-list > a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+
+#people {
+  min-width: 100%;
+  transform: skewY(-3deg);
+  background-color: white;
+  z-index: 1;
+  margin: 0 auto;
+  padding: 4rem 0;
+  text-align: right;
+}
+.people-inner {
+  padding: 6rem 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  transform: skewY(3deg);
+}
+.people-list {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+}
+.people-list > * {
+  flex: 1 1 15%;
+  padding: 1rem;
+  color: black;
+  text-decoration: none;
+}
+.people-list img {
+  border-radius: 50%;
+}
+.become-member {
+  background-color: #f26522;
+  color: white;
+}
+.become-member:hover {
+  opacity: 0.8;
+}
+.become-member > h2 {
+  font-size: 5rem;
+  line-height: 5rem;
+  margin: 0;
+}
+.become-member > p {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 1rem;
+}
+
+#location {
+  transform: skewY(-3deg);
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  margin-top: -1px;
+}
+#map {
+  height: 20rem;
+  transform: skewY(3deg);
+}
+
+footer {
+  z-index: 1;
+  padding: 1rem;
+  text-align: right;
+  background-color: white;
+  color: #999;
+  font-size: 0.8rem;
+}
+footer a {
+  color: #999;
+}
+footer a:hover {
+  opacity: 0.8;
+}
+
+@media only screen and (max-device-width: 768px) {
+  .titlebar-bg {
+    background: linear-gradient(-3deg, transparent, transparent 50%, #f26522 50%, #f26522 100%);
+    width: 100%;
+    height: 5.75rem;
+  }
+  .titlebar {
+    order: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0;
+  }
+  .main {
+    position: inherit;
+    order: 2;
+    flex-wrap: wrap;
+    height: inherit;
+    padding: 7rem 0;
+  }
+  #projects {
+    margin-top: -3rem;
+    order: 3;
+  }
+  #people {
+    order: 4;
+  }
+  #location {
+    order: 5;
+  }
+  footer {
+    order: 6;
+  }
+
+  #events {
+    order: 2;
+  }
+  header {
+    order: 1;
+  }
+  header > a {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+  }
+
+  .nav {
+    margin: 0;
+  }
+  .nav li {
+    display: block;
+  }
+}
