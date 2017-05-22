@@ -158,13 +158,24 @@ header > h2 {
   text-transform: uppercase;
   text-align: right;
   align-self: center;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0;
   font-size: 2rem;
 }
 .title > a {
   color: white;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+#logo-image {
+  transform: skewY(3deg);
+  padding-right: 0.5rem;
+  height: 3rem;
+}
+#logo-text {
+  transform: rotate(14deg);
+  height: 3rem;
 }
 
 #projects {
@@ -259,6 +270,7 @@ header > h2 {
 .location-inner {
   max-width: 960px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
 .location-inner > h2 {
   transform: skewY(3deg);
