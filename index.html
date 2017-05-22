@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Metalab</title>
+    <title>Metalab: der Hackspace im Herzen Wiens</title>
     <link href="css/style.css" rel="stylesheet">
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
@@ -40,7 +40,7 @@
           <a href="https://metalab.at/calendar/">mehr...</a>
         </div>
         <header>
-          <h2>Der Hackspace im Herzen Wiens</h2>
+          <h2>Metalab: der Hackspace im Herzen Wiens</h2>
           <p>Das Metalab ist ein unabhängig und gemeinschaftlich betriebener Raum für technisch-kreative Projekte im Zentrum von Wien, gleich hinter dem Rathaus.</p>
           <p>Auf über 200 m² bietet es Raum und Infrastruktur für Wissensaustausch, die Umsetzung von innovativen Projekten und die Abhaltung von Veranstaltungen. Es dient auch als sozialer Treffpunkt für kreative Köpfe jeden Alters aus dem weiten Umfeld von Informations- und Kommunikationstechnologie, neue Medien, usw.</p>
           <div class="main-buttons">
@@ -59,12 +59,10 @@
             <li><a href="#people">Menschen</a></li>
             <li><a href="#location">Location</a></li>
           </ul>
-          <h1 class="title">
-            <a href="#">
-              <img id="logo-image" src="https://metalab.at/wiki/images/3/37/Atomic_1color_scalable.svg" alt="Metalab Bildlogo" />
-              <img id="logo-text" src="https://metalab.at/wiki/images/1/17/Metalab.svg" alt="Metalab Textlogo" />
-            </a>
-          </h1>
+          <a class="title" href="#">
+            <img id="logo-image" src="https://metalab.at/wiki/images/3/37/Atomic_1color_scalable.svg" alt="Metalab Logo" />
+            <img id="logo-text" src="https://metalab.at/wiki/images/1/17/Metalab.svg" alt="Metalab" />
+          </a>
         </div>
       </div>
     </nav>
@@ -159,9 +157,11 @@
       window.addEventListener('scroll', function() {
         var titlebar = document.querySelector('.titlebar-bg');
         if(titlebar.getBoundingClientRect().top <= 0) {
-          titlebar.style.background = 'linear-gradient(-3deg, transparent, transparent 50%, #f26522 50%, #f26522 100%)';
+          titlebar.classList.add('sticky');
         } else {
-          titlebar.style.background = 'transparent';
+          if(titlebar.classList.contains('sticky')) {
+            titlebar.classList.remove('sticky');
+          }
         }
       });
     </script>
