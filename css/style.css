@@ -199,7 +199,8 @@ header > h2 {
 .project-list > a {
   flex: 1 1 15%;
   background-color: rgba(255,255,255,0.2);
-  margin: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   text-align: center;
   color: white;
   text-decoration: none;
@@ -207,6 +208,15 @@ header > h2 {
 .project-list > a:hover {
   opacity: 0.8;
   text-decoration: underline;
+}
+.project-list > a > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.project-list > a > div > * {
+  margin: 0;
 }
 
 
