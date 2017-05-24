@@ -8,6 +8,14 @@ body {
   display: flex;
   flex-direction: column;
 }
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
 
 .main {
   background: url('https://metalab.at/wiki/images/b/b1/Maker_Faire_Dome.jpg') no-repeat center center fixed;
@@ -25,10 +33,10 @@ body {
 }
 .main-inner > * {
   margin: 1rem;
-  max-width: 500px;
 }
 
 #events {
+  flex: 1 1 40%;
   background-color: #003054;
   color: white;
   box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
@@ -38,14 +46,8 @@ body {
   padding: 0.5rem;
 }
 #events > a {
-  color: white;
-  text-decoration: none;
   font-size: 0.75rem;
   padding: 0.25rem;
-}
-#events > a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
 }
 .eventlist {
   list-style: none;
@@ -53,16 +55,8 @@ body {
   padding: 0;
 }
 .event {
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   display: block;
-}
-.event > a {
-  color: white;
-  text-decoration: none;
-}
-.event > a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
 }
 .event:nth-child(2n+1) {
   background-color: rgba(255,255,255,0.5);
@@ -70,19 +64,29 @@ body {
 .event:nth-child(2n) {
   background-color: rgba(255,255,255,0.2);
 }
-.event > a > * {
+.event > * {
   margin: 0;
 }
-.event > a > p {
+.event > p {
   display: inline;
   font-size: 0.75rem;
 }
-.event-room::before {
-  content: "@ ";
+.event > a > h4 {
+  margin: 0.25rem 0;
+}
+.event-description {
+  font-size: 0.8rem !important;
+}
+.event-ical, .event-category {
+  background-color: #f26522;
+  padding: 0.1rem 0.25rem;
+}
+.event-category a::before {
+  content: "#";
 }
 
 header {
-  flex: 0 1 auto;
+  flex: 1 1 60%;
   background-color: white;
   box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
 }
@@ -111,11 +115,6 @@ header > h2 {
   padding: 0.5rem;
   white-space: nowrap;
   display: inline-block;
-  text-decoration: none;
-}
-.main-buttons > a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
 }
 
 .titlebar-bg {
@@ -152,13 +151,6 @@ header > h2 {
 }
 .nav a {
   padding: 0 0.5rem;
-  text-decoration: none;
-  color: white;
-}
-.nav a:hover {
-  text-decoration: underline;
-  color: white;
-  opacity: 0.8;
 }
 .title {
   color: white;
@@ -202,12 +194,6 @@ header > h2 {
   margin: 0.5rem;
   padding: 0.5rem;
   text-align: center;
-  color: white;
-  text-decoration: none;
-}
-.project-list > a:hover {
-  opacity: 0.8;
-  text-decoration: underline;
 }
 .project-list > a > div {
   display: flex;
@@ -257,11 +243,19 @@ header > h2 {
   box-shadow: 0.2rem 0.2rem rgba(0,0,0,0.5);
   opacity: 0.8;
 }
+.all-members {
+  color: #f26522;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0;
+}
 .become-member {
   background-color: #f26522;
   color: white;
 }
 .become-member:hover {
+  text-decoration: none;
   opacity: 0.8;
 }
 .become-member > h2 {
@@ -306,9 +300,7 @@ footer {
 }
 footer a {
   color: #999;
-}
-footer a:hover {
-  opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
