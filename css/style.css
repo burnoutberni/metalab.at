@@ -71,7 +71,7 @@ a:hover {
   display: inline;
   font-size: 0.75rem;
 }
-.event > a > h4 {
+.event > h4 {
   margin: 0.25rem 0;
 }
 .event-description {
@@ -85,21 +85,26 @@ a:hover {
   content: "#";
 }
 
-header {
+.intro {
   flex: 1 1 60%;
   background-color: white;
   box-shadow: 0.5rem 0.5rem rgba(0,0,0,0.5);
 }
-header > * {
+.intro > * {
   padding: 0.5rem;
 }
-header > p {
+.intro > p {
   margin: 0;
 }
-header > h2 {
+.intro > h2 {
   background-color: #003054;
   color: white;
   margin: 0;
+}
+.intro .english {
+  background-color: #f26522;
+  padding: 0.1rem 0.25rem;
+  font-size: 0.75rem;
 }
 .main-buttons {
   padding-bottom: 1rem;
@@ -280,8 +285,6 @@ header > h2 {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-.location-inner > h2 {
   transform: skewY(3deg);
   text-align: right;
 }
@@ -341,10 +344,10 @@ footer a {
   #events {
     order: 2;
   }
-  header {
+  .intro {
     order: 1;
   }
-  header > a {
+  .intro > a {
     margin: 0 auto;
     display: block;
     text-align: center;

@@ -21,7 +21,7 @@
                 <span class="event-date">Tue 23.05.2017 18:00 - 22:00</span>
                 @ <a href="https://metalab.at/calendar/special/Location/Bibliothek/" class="event-room">Bibliothek</a>
               </p>
-              <a href="https://metalab.at/wiki/FunkFeuer"><h4 class="event-title">Funkfeuer Housing Orga Treffen</h4></a>
+              <h4 class="event-title"><a href="https://metalab.at/wiki/FunkFeuer">Funkfeuer Housing Orga Treffen</a></h4>
               <p class="event-description">Lorem ipsum dolor sit amet…</p>
             </li>
             <li class="event">
@@ -30,7 +30,7 @@
                 <span class="event-date">Tue 23.05.2017 19:30 - 22:00</span>
                 @ <a href="https://metalab.at/calendar/special/Location/Hauptraum/" class="event-room">Hauptraum</a>
               </p>
-              <a href="https://metalab.at/wiki/2017-05-23_Jour_Fixe"><h4 class="event-title">Jour Fixe</h4></a>
+              <h4 class="event-title"><a href="https://metalab.at/wiki/2017-05-23_Jour_Fixe">Jour Fixe</a></h4>
               <p class="event-description">Lorem ipsum dolor sit amet…</p>
             </li>
             <li class="event">
@@ -39,7 +39,7 @@
                 <span class="event-date">Wed 24.05.2017 18:00 - 23:00</span>
                 @ <a href="https://metalab.at/calendar/special/Location/Bibliothek/" class="event-room">Bibliothek</a>
               </p>
-              <a href="https://metalab.at/wiki/PyUGAT"><h4 class="event-title">Python User Group Monatstreffen</h4></a>
+              <h4 class="event-title"><a href="https://metalab.at/wiki/PyUGAT">Python User Group Monatstreffen</a></h4>
               <p class="event-description">Lorem ipsum dolor sit amet…</p>
             </li>
             <li class="event">
@@ -48,21 +48,24 @@
                 <span class="event-date">Fri 26.05.2017 19:30 - 23:59</span>
                 @ <a href="https://metalab.at/calendar/special/Location/Hauptraum/" class="event-room">Hauptraum</a>
               </p>
-              <a href="https://metalab.at/wiki/Metaday_78"><h4 class="event-title">Metaday 78</h4></a>
+              <h4 class="event-title"><a href="https://metalab.at/wiki/Metaday_78">Metaday 78</a></h4>
               <p class="event-description">Fiber statt Cyber (for real this time) – Vortrag von Matthias Šubik und Clemens Hopfer von Funkfeuer</p>
               <p class="event-category"><a href="https://metalab.at/calendar/special/Category/metaday/">metaday</a></p>
           </ul>
           <a href="https://metalab.at/calendar/">mehr...</a>
         </div>
-        <header>
+        <div class="intro">
           <h2>Metalab: der Hackspace im Herzen Wiens</h2>
-          <p>Das Metalab ist ein unabhängig und gemeinschaftlich betriebener Raum für technisch-kreative Projekte im Zentrum von Wien, gleich hinter dem Rathaus.</p>
+          <p>
+            <a href="https://metalab.at/wiki/English" class="english">In English</a>
+            Das Metalab ist ein unabhängig und gemeinschaftlich betriebener Raum für technisch-kreative Projekte im Zentrum von Wien, gleich hinter dem Rathaus.
+          </p>
           <p>Auf über 200 m² bietet es Raum und Infrastruktur für Wissensaustausch, die Umsetzung von innovativen Projekten und die Abhaltung von Veranstaltungen. Es dient auch als sozialer Treffpunkt für kreative Köpfe jeden Alters aus dem weiten Umfeld von Informations- und Kommunikationstechnologie, neue Medien, usw.</p>
           <div class="main-buttons">
             <a href="#location">Schau vorbei!</a>
             <a href="https://metalab.at/wiki/Info_Folder">Mehr über das Metalab.</a>
           </div>
-        </header>
+        </div>
       </div>
     </section>
     <nav class="titlebar-bg">
@@ -143,12 +146,15 @@
     <section id="location">
       <div class="location-inner">
         <h2>Komm' vorbei!</h2>
+        <p>Du findest uns in der Rathausstraße 6 im 1. Wiener Gemeindebezirk gleich hinter dem Rathaus.</p>
+        <p>Offen hat das Lab, wenn mindestens ein Mitglied anwesend ist. Zumindest zur „Kernzeit“ zwischen 15:00 und 00:00 ist das erfahrungsgemäß jeden Tag der Fall, an den meisten Arbeitstagen sind auch schon mittags einige Metalabber*innen am Werk. Meist ist das Metalab fast 24 Stunden am Tag besetzt, insbesondere Donnerstag bis Sonntag. Selbstverständlich bekommst du auch jederzeit gerne eine Führung durch die Räumlichkeiten!</p>
       </div>
       <div id="map"></div>
     </section>
     <footer>
       Made with ♥ at Metalab.
-      Runs on <a href="https://github.com/metalab/mos">Metalab OS</a>.
+      Runs on <a href="https://github.com/metalab/mos">Metalab OS</a>
+      (<a href="https://metalab.at/member/login/">Login</a>).
       <a href="https://metalab.at/issues">Issue Tracker</a>.
       <a href="https://metalab.at/wiki/Impressum">Impressum</a>.
     </footer>
@@ -167,7 +173,7 @@
         anchor: 'left'
       })
         .setLngLat([16.35610, 48.20941])
-        .setHTML('<h1 style="margin: 0;">Metalab</h1><p style="margin: 0;">Rathausstraße 6, 1010 Wien</p><p style="margin: 0;">Immer offen, wenn wer da ist!</p><p style="margin: 0;">~17:00-01:00</p>')
+        .setHTML('<h1 style="margin: 0;">Metalab</h1><p style="margin: 0;">Rathausstraße 6, 1010 Wien</p>')
         .addTo(map);
 
       window.addEventListener('scroll', function() {
