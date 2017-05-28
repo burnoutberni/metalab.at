@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Metalab: der Hackspace im Herzen Wiens</title>
     <link href="css/style.css" rel="stylesheet">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.36.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js" integrity="sha512-A7vV8IFfih/D732iSSKi20u/ooOfj/AGehOKq0f4vLT1Zr2Y+RX7C+w8A1gaSasGtRUZpF/NZgzSAu4/Gc41Lg==" crossorigin=""></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
   </head>
   <body>
     <section class="main">
@@ -159,22 +160,32 @@
       <a href="https://metalab.at/wiki/Impressum">Impressum</a>.
     </footer>
     <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoiYnVybm91dGJlcm5pIiwiYSI6ImNqMzBoOHZsejAwMmUzM24wcXNkbWd1emgifQ.Y0QCVSva-iveGIhd6XP1zg';
-      var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/mapbox/streets-v9',
-        center: [16.35610, 48.20941],
-        zoom: 15,
-        interactive: false
+      var metalab_location = [48.20941, 16.35610];
+      var layer = new L.StamenTileLayer('toner');
+      var map = new L.Map('map', {
+        center: metalab_location,
+        zoom: 17,
+        minZoom: 17,
+        maxZoom: 17,
+        zoomControl: false,
+        touchZoom: false,
+        doubleClickZoom: false,
+        scrollWheelZoom: false,
+        boxZoom: false,
+        keyboard: false,
+        tap: false,
+        dragging: false
       });
-      var popup = new mapboxgl.Popup({
+      map.addLayer(layer);
+
+      var popup = new L.Popup({
         closeButton: false,
         closeOnClick: false,
-        anchor: 'left'
+        className: 'leaflet-popup-location'
       })
-        .setLngLat([16.35610, 48.20941])
-        .setHTML('<h1 style="margin: 0;">Metalab</h1><p style="margin: 0;">Rathausstraße 6, 1010 Wien</p>')
-        .addTo(map);
+        .setLatLng(metalab_location)
+        .setContent('<h3>Metalab</h3><p>Rathausstraße 6, 1010 Wien</p>')
+        .openOn(map);
 
       window.addEventListener('scroll', function() {
         var titlebar = document.querySelector('.titlebar-bg');

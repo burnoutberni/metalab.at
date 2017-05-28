@@ -281,6 +281,22 @@ section, footer {
 #map {
   height: 20rem;
 }
+.leaflet-popup-location .leaflet-popup-content-wrapper {
+  border-radius: 0;
+  background-color: #f26522;
+}
+.leaflet-popup-location .leaflet-popup-content {
+  margin: 0.5rem;
+  line-height: inherit;
+}
+.leaflet-popup-location h3, .leaflet-popup-location p {
+  margin: 0 !important;
+  color: white;
+}
+.leaflet-popup-location .leaflet-popup-tip {
+  background-color: #f26522;
+}
+
 
 footer {
   padding: 1rem 0;
